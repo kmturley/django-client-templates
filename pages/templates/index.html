@@ -1,0 +1,20 @@
+{% load pages_tags %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Django Client Templates</title>
+    <meta name="description" content="" />
+    <meta name=viewport content="width=device-width,initial-scale=1" />
+</head>
+<body>
+    <div id="list">
+        {% include "includes/list.html" %}
+    </div>
+    <script type="text/template" id="tmpl-list">
+        {% raw_include "includes/list.html" %}
+    </script>
+    <script src="/static/libs/plate.min.js"></script>
+    <script src="/static/example.js"></script>
+</body>
+</html>
