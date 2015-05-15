@@ -9,10 +9,10 @@
 </head>
 <body>
     <h1>AngularJS</h1>
-    <div class="row" ng-controller="dynamic" ng-include="'nav'">
+    <div class="row" template="nav">
         {% include "angular/includes/nav.html" with ng=0 %}
     </div>
-    <div class="row" ng-controller="dynamic" ng-include="'list'">
+    <div class="row" template="list">
         {% include "angular/includes/list.html" with ng=0 %}
     </div>
     <script type="text/ng-template" id="nav">
