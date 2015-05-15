@@ -1,0 +1,27 @@
+{% load pages_tags %}
+<!doctype html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="utf-8" />
+    <title>Django Client Templates - AngularJS</title>
+    <meta name="description" content="" />
+    <meta name=viewport content="width=device-width,initial-scale=1" />
+</head>
+<body>
+    <h1>AngularJS</h1>
+    <div class="row" ng-controller="dynamic" ng-include="'nav'">
+        {% include "angular/includes/nav.html" with ng=0 %}
+    </div>
+    <div class="row" ng-controller="dynamic" ng-include="'list'">
+        {% include "angular/includes/list.html" with ng=0 %}
+    </div>
+    <script type="text/ng-template" id="nav">
+        {% include "angular/includes/nav.html" with ng=1 %}
+    </script>
+    <script type="text/ng-template" id="list">
+        {% include "angular/includes/list.html" with ng=1 %}
+    </script>
+    <script src="/static/libs/angular/angular.min.js"></script>
+    <script src="/static/angular.js"></script>
+</body>
+</html>

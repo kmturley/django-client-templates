@@ -1,0 +1,27 @@
+{% load pages_tags %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Django Client Templates - PlateJS</title>
+    <meta name="description" content="" />
+    <meta name=viewport content="width=device-width,initial-scale=1" />
+</head>
+<body>
+    <h1>PlateJS</h1>
+    <div class="row" data-tmpl="nav">
+        {% include "plate/includes/nav.html" %}
+    </div>
+    <div class="row" data-tmpl="list">
+        {% include "plate/includes/list.html" %}
+    </div>
+    <script type="text/template" id="list">
+        {% raw_include "plate/includes/list.html" %}
+    </script>
+    <script type="text/template" id="nav">
+        {% raw_include "plate/includes/nav.html" %}
+    </script>
+    <script src="/static/libs/plate/plate.min.js"></script>
+    <script src="/static/plate.js"></script>
+</body>
+</html>

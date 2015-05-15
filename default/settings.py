@@ -37,7 +37,8 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'pages',
+    'pages', # raw_include tag + PlateJS
+    'djangular' # django-angular module + AngularJS
 )
 
 MIDDLEWARE_CLASSES = (

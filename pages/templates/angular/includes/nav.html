@@ -1,0 +1,8 @@
+{% load djangular_tags %}
+{% angularjs ng %}
+<ul class="nav"{% if ng %} ng-repeat="item in items"{% endif %}>
+    {% for item in items %}
+        <li><a href="#"{% if ng %} ng-bind="item.name"{% endif %}>{{ item.name }}</a></li>
+    {% endfor %}
+</ul>
+{% endangularjs %}

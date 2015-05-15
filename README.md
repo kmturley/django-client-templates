@@ -2,6 +2,9 @@
 
 Example showing how to render django templates client side. Sharing the same template code between the two!
 
+* Plate - Uses a Django raw_include tag + PlateJS to re-render templates in the browser
+* Angular - Uses django-angular module + AngularJS to re-render templates in the browser
+
 ## Installation
 
 Ensure you have Python and Django installed using the instructions at:
