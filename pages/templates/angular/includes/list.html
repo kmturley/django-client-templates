@@ -1,8 +1,8 @@
 {% load djangular_tags %}
 {% angularjs ng %}
-<div class="list"{% if ng %} ng-repeat="item in items"{% endif %}>
-    {% for item in items %}
-        <div class="item">
+<div class="list">
+    {% for item in items|slice:":1" %}
+        <div class="item"{% if ng %} ng-repeat="item in items"{% endif %}>
             <h1{% if ng %} ng-bind="item.name"{% endif %}>{{ item.name }}</h1>
             <p{% if ng %} ng-bind="item.desc"{% endif %}>{{ item.desc }}</p>
         </div>

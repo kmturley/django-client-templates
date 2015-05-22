@@ -3,7 +3,7 @@ from django import template, conf
 register = template.Library()
 
 @register.simple_tag
-def raw_include(path):
+def raw_include(path, *args, **kwargs):
     import os.path
 
     for template_dir in conf.settings.TEMPLATE_DIRS:
